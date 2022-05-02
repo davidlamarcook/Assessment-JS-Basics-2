@@ -200,18 +200,15 @@ const filteredFood = foodArr.filter(food => food.tags.includes('Saucy'))
 */
 
 //CODE HERE
-let filterByProperty = (property, number, type) => {
-    //console.log( foodArr['property'])
-    if(type === 'above') {
-        let filteredFood = foodArr.filter(property => {property < number})
-        return filteredFood  
-    } else {
-        let filteredFood = foodArr.filter(property => {property > number})
-        return filteredFood 
+let filterByProperty = (property, number, type) => foodArr.filter(food => {
+    if (type === 'above') {
+        return food[property] > number
+    } else if (type === 'below') {
+        return food[property] < number
     }
+    return food
+})
 
-    //return filteredFood
-}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -222,6 +219,6 @@ let filterByProperty = (property, number, type) => {
 
 //CODE HERE
 
-console.log(filterByProperty('rating', 1, 'above'))
+console.log(filterByProperty('price', 10, 'above'))
 
 //I really struggled with this one. Spent about 3+ hours trying to figur it out but felt I made progress but then hit another roadblock, Would love to go over this with one of you two.
