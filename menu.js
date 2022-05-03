@@ -209,6 +209,15 @@ let filterByProperty = (property, number, type) => foodArr.filter(food => {
     return food
 })
 
+//let filter = (cb) => {
+//    const filteredArr =[]
+//    for (let i = 0; i < foodArr.length; i++) {
+//        if (cb(foodArr[i])){
+//            filteredArr.push(foodArr[i])
+//        }
+//    }
+//    return filteredArr
+//}
 
 /*
     Invoke the `filterByProperty` function passing
